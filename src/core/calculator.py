@@ -29,9 +29,10 @@ class FinancialCalculator:
         if not all(isinstance(x, (int, float)) for x in [principal, rate, time, compounds_per_year]):
             raise TypeError("All arguments must be numeric")
             
-        # Breaking the calculation - just adding rate to principal
-        amount = principal + rate  # This will fail since test expects 1104.94
-        # For test case: 1000 + 0.05 = 1000.05
+        # Introducing a very long line that will fail flake8's max-line-length check and some unused variables that will trigger linting errors
+        some_unused_variable = 1000; another_unused = 2000; third_unused = 3000; result_that_we_dont_use = principal * rate * time * compounds_per_year + some_really_long_calculation_that_makes_this_line_way_too_long
+            
+        amount = principal + rate
         
         self._record_operation(
             operation="COMPOUND_INTEREST",
