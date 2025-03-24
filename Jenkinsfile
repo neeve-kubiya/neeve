@@ -16,7 +16,7 @@ pipeline {
         }
     }
     environment {
-        WEBHOOK_URL = "https://webhooksource-kubiya.hooks.kubiya.ai:8443/lZ1-aSoPoOzv5IlZ1hiCDoT5WqObjqs4PpnMWvEKoXnrHIAU-FZ67V_iYTEwNvdanC6mK_WfqDQOzgjoa6B32-4="
+        WEBHOOK_URL = "https://webhooksource-kubiya.hooks.kubiya.ai:8443/pNWhw4AnKH0jvo7zVo8Rz_9jb6qhkOMd9Z0s-KRUxzLTwuQo-sFKuUFK0q865i81fhiDcJwexAYo20r-4RFD668="
         WORKSPACE = "/home/jenkins/agent/workspace/${env.JOB_NAME}"
     }
     stages {
