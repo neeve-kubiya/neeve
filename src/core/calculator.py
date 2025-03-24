@@ -29,9 +29,8 @@ class FinancialCalculator:
         if not all(isinstance(x, (int, float)) for x in [principal, rate, time, compounds_per_year]):
             raise TypeError("All arguments must be numeric")
             
-        # Breaking the calculation - just adding rate to principal
-        amount = principal + rate  # This will fail since test expects 1104.94
-        # For test case: 1000 + 0.05 = 1000.05
+        # Introducing a type error - assigning str to float
+        amount: float = "invalid"  # This will fail mypy type checking
         
         self._record_operation(
             operation="COMPOUND_INTEREST",
